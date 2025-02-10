@@ -14,6 +14,7 @@ import FAQSection from '../FAQSection';
 import KeyFeaturesSection from '../KeyFeaturesSection';
 import PricingSection from '../Pricing';
 import ProblemSolutionSection from '../OurSolution';
+import TeamSection from '../Team';
 
 
 
@@ -38,7 +39,6 @@ const Page = () => {
   
   {/* Flex Container for Text and Images */}
   <section className="flex flex-col items-center px-4 sm:px-8 lg:px-16">
-  {/* Flex Container for Text and Images */}
   <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mx-auto mb-8 sm:mb-12 md:mb-16 gap-6 md:gap-12 lg:gap-16 text-center md:text-start">
     
    {/* Text Section */}
@@ -102,10 +102,10 @@ const Page = () => {
       <section className="bg-white py-20 px-8">
         <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-12">Get Started in  <span className="text-green-500 ">  3 Easy Steps</span></h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-          <div>
+          <div className=' '>
 
 
-            <h3 className="text-xl font-semibold mb-4">
+            <h3 className="text-xl font-semibold mb-4 ">
 
               
                 1️⃣
@@ -135,6 +135,7 @@ const Page = () => {
 <PricingSection/>
 
 <InvestorSection/>
+<TeamSection/>
 
 
      {/* Enhanced Footer with Call-to-Action and Social Links */}
