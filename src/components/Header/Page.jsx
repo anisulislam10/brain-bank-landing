@@ -149,9 +149,9 @@ const Page = () => {
       <button className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition duration-300 transform hover:scale-105">
         Download Now for Free
       </button>
-      <button className="bg-orange-600 text-white px-8 py-3 rounded-lg hover:bg-orange-700 transition duration-300 transform hover:scale-105">
+      <Link to="/signup" className="bg-orange-600 text-white px-8 py-3 rounded-lg hover:bg-orange-700 transition duration-300 transform hover:scale-105">
         Sign Up Today
-      </button>
+      </Link>
     </div>
 
     <div className="flex justify-center space-x-6 text-white">
