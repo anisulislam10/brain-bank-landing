@@ -40,26 +40,27 @@ const Page = () => {
   {/* Flex Container for Text and Images */}
   <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mx-auto mb-8 sm:mb-12 md:mb-16 gap-6 md:gap-12 lg:gap-16 text-center md:text-start">
     
-    {/* Text Section */}
-<div className="flex flex-col items-center md:items-start w-full md:w-3/4 lg:w-1/2 px-4 sm:px-6 md:px-8 text-center md:text-start">
-  <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 sm:mb-6 md:mb-8 animate__animated animate__fadeIn">
+   {/* Text Section */}
+<div className="flex flex-col items-center sm:items-center md:items-start w-full sm:w-5/6 md:w-3/4 lg:w-1/2 px-4 sm:px-6 md:px-8 text-center sm:text-center md:text-start">
+  <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 sm:mb-6 md:mb-8 animate__animated animate__fadeIn mt-[100px] text-start">
     Real People, Real Advice Anytime, Anywhere!
   </h1>
-  <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 animate__animated animate__fadeIn animate__delay-1s">
+  <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 animate__animated animate__fadeIn animate__delay-1s text-start">
     Access affordable, practical advice from everyday experts. Whether it’s immigration tips, event planning, or career guidance, Brain Bank connects you with the right people to solve your problems.
   </p>
 </div>
+
     {/* Image Section */}
     <div className="relative w-full md:w-1/2 flex justify-center">
       <img
         src={screenn}
         alt="Screen"
-        className="max-w-full sm:w-auto h-auto sm:h-130 transform rotate-6 mb-4"
+        className="max-w-full sm:w-auto h-[400px] sm:h-130 transform rotate-6 mb-4 "
       />
       <img
         src={img1}
         alt="Logo"
-        className="absolute top-0 left-0 max-w-full sm:w-auto h-auto sm:h-110 transform rotate-6 sm:ml-10 sm:mt-10"
+        className="absolute top-10 left-[-10px] max-w-full sm:w-auto h-[400px] sm:h-110 transform rotate-6 sm:ml-10 sm:mt-10 "
       />
     </div>
   </div>
