@@ -16,12 +16,12 @@ const FAQSection = () => {
         <h2 className="text-3xl font-semibold text-gray-800 mb-6">
           Got Questions? <span className="text-green-500">We’ve Got Answers!</span>
         </h2>
-        <div className="space-y-8">
+        <div className="space-y-8  ">
           <div
-            className="bg-white shadow-lg rounded-lg p-6 cursor-pointer"
+            className="bg-white shadow-lg rounded-lg p-6 cursor-pointer  "
             onClick={() => toggleAnswer(0)}
           >
-            <h3 className="text-xl font-semibold text-gray-700 flex justify-between items-center">
+            <h3 className="text-xl font-semibold text-gray-700 flex justify-between items-center ">
               Is BrainBank free to use?
               <FontAwesomeIcon
                 icon={openIndex === 0 ? faMinus : faPlus}
@@ -30,7 +30,7 @@ const FAQSection = () => {
             </h3>
             {openIndex === 0 && (
               <p className="text-gray-600 mt-2">
-                Yes, signing up and browsing experts is free. You only pay for
+               ✅ Yes, signing up and browsing experts is free. You only pay for
                 the advice you need.
               </p>
             )}
@@ -49,7 +49,7 @@ const FAQSection = () => {
             </h3>
             {openIndex === 1 && (
               <p className="text-gray-600 mt-2">
-                Simply sign up, list your expertise, and start earning money by
+               ✅ Simply sign up, list your expertise, and start earning money by
                 helping others.
               </p>
             )}
@@ -68,7 +68,7 @@ const FAQSection = () => {
             </h3>
             {openIndex === 2 && (
               <p className="text-gray-600 mt-2">
-                Absolutely. We prioritize your privacy and ensure secure
+              ✅ Absolutely. We prioritize your privacy and ensure secure
                 transactions.
               </p>
             )}
