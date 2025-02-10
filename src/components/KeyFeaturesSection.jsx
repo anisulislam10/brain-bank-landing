@@ -9,7 +9,7 @@ import ui from './../assets/header/ui.png'
 
 const KeyFeaturesSection = () => {
   return (
-    <div className="bg-gray-50 py-16 px-4 sm:px-8">
+    <div className="bg-gray-50 py-16 px-4 sm:px-8 sm:w-full">
       <div className="max-w-screen-xl mx-auto text-center">
         <h2 className="text-3xl font-semibold text-gray-800 mb-12">
           Why Choose Brain Bank?

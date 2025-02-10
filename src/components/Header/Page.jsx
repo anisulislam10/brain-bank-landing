@@ -27,10 +27,8 @@ const Page = () => {
     };
   return (
     <div >
-      {/* Headline (Above the Fold) */}
-     {/* Headline (Above the Fold) */}
 {/* Headline (Above the Fold) */}
-<section className="relative bg-gradient-to-r from-green-500 to-green-600 text-white h-screen flex items-center justify-center text-center px-6">
+<section className="relative bg-gradient-to-r from-green-500 to-green-600 text-white min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left px-4 sm:px-8 md:px-12 lg:px-16">
   <img
     src={logo_off}
     alt="Logo"
@@ -38,49 +36,53 @@ const Page = () => {
   />
   
   {/* Flex Container for Text and Images */}
-  <div className="flex flex-row items-center justify-between w-full max-w-6xl mx-auto mb-16 ml-40 text-start">
+  <section className="flex flex-col items-center px-4 sm:px-8 lg:px-16">
+  {/* Flex Container for Text and Images */}
+  <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mx-auto mb-8 sm:mb-12 md:mb-16 gap-6 md:gap-12 lg:gap-16 text-center md:text-start">
+    
     {/* Text Section */}
-    <div className="flex flex-col items-start w-1/2 px-6">
-      <h1 className="text-3xl sm:text-4xl lg:text-3xl font-extrabold mb-6 animate__animated animate__fadeIn">
-        Real People, Real Advice Anytime, Anywhere!
-      </h1>
-      <p className="text-lg sm:text-xl mb-8 animate__animated animate__fadeIn animate__delay-1s">
-        Access affordable, practical advice from everyday experts. Whether it’s immigration tips, event planning, or career guidance, Brain Bank connects you with the right people to solve your problems.
-      </p>
-    </div>
-
+<div className="flex flex-col items-center md:items-start w-full md:w-3/4 lg:w-1/2 px-4 sm:px-6 md:px-8 text-center md:text-start">
+  <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 sm:mb-6 md:mb-8 animate__animated animate__fadeIn">
+    Real People, Real Advice Anytime, Anywhere!
+  </h1>
+  <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 animate__animated animate__fadeIn animate__delay-1s">
+    Access affordable, practical advice from everyday experts. Whether it’s immigration tips, event planning, or career guidance, Brain Bank connects you with the right people to solve your problems.
+  </p>
+</div>
     {/* Image Section */}
-    <div className="relative w-1/2 flex justify-center">
+    <div className="relative w-full md:w-1/2 flex justify-center">
       <img
         src={screenn}
         alt="Screen"
-        className="w-full sm:w-auto h-auto sm:h-130 transform rotate-15 mb-4 ml-95"
+        className="max-w-full sm:w-auto h-auto sm:h-130 transform rotate-6 mb-4"
       />
       <img
         src={img1}
         alt="Logo"
-        className="absolute top-0 left-0 w-full sm:w-auto h-auto sm:h-110 transform rotate-15  ml-20 mt-10"
+        className="absolute top-0 left-0 max-w-full sm:w-auto h-auto sm:h-110 transform rotate-6 sm:ml-10 sm:mt-10"
       />
     </div>
   </div>
 
-  {/* Button Section Below Text */}
-  <div className="space-y-4 space-x-4 w-full sm:w-auto mt-150  ">
-    <button className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition duration-300 transform hover:scale-105 w-full sm:w-auto border-1 border-white">
-      <i className="fa fa-play text-2xl text-white"> </i> Download Now for Free
-    </button>
+ {/* Button Section */}
+<div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 w-full justify-center mt-10">
+  <button className="bg-green-600 text-white px-6 sm:px-8 lg:px-12 py-3 rounded-lg hover:bg-green-700 transition duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base lg:text-lg">
+    <i className="fa fa-play text-2xl text-white"></i> Download Now for Free
+  </button>
 
-    <button className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition duration-300 transform hover:scale-105 w-full sm:w-auto border-1 border-white">
-      <i className="fa fa-sign-in text-2xl text-white"> </i> Signup Today
-    </button>
+  <button className="bg-green-600 text-white px-6 sm:px-8 lg:px-12 py-3 rounded-lg hover:bg-green-700 transition duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base lg:text-lg">
+    <i className="fa fa-sign-in text-2xl text-white"></i> Signup Today
+  </button>
 
-    <button
-      className="bg-orange-600 text-white px-8 py-3 rounded-lg hover:bg-orange-700 transition duration-300 transform hover:scale-105 w-full sm:w-auto border-1 border-white"
-      onClick={handleScroll} // Scroll when clicked
-    >
-      <i className="fa fa-chevron-circle-down text-2xl text-white"> </i> Learn more
-    </button>
-  </div>
+  <button
+    className="bg-orange-600 text-white px-6 sm:px-8 lg:px-12 py-3 rounded-lg hover:bg-orange-700 transition duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base lg:text-lg"
+    onClick={handleScroll}
+  >
+    <i className="fa fa-chevron-circle-down text-2xl text-white"></i> Learn more
+  </button>
+</div>
+</section>
+
 </section>
 
 
