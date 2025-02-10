@@ -16,6 +16,7 @@ import PricingSection from '../Pricing';
 import ProblemSolutionSection from '../OurSolution';
 import TeamSection from '../Team';
 
+import { Link } from "react-router-dom";
 
 
 
@@ -72,9 +73,9 @@ const Page = () => {
     <i className="fa fa-play text-2xl text-white"></i> Download Now for Free
   </button>
 
-  <button className="bg-green-700 text-white px-6 sm:px-8 lg:px-12 py-3 rounded-lg hover:bg-green-800 transition duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base lg:text-lg">
+  <Link to="/signup" className="bg-green-700 text-white px-6 sm:px-8 lg:px-12 py-3 rounded-lg hover:bg-green-800 transition duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base lg:text-lg">
     <i className="fa fa-sign-in text-2xl text-white"></i> Signup Today
-  </button>
+  </Link>
 
   <button
     className="bg-orange-600 text-white px-6 sm:px-8 lg:px-2 py-3 rounded-lg hover:bg-orange-700 transition duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base lg:text-lg mb-2 "
