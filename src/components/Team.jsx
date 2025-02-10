@@ -25,25 +25,7 @@ const teamMembers = [
     twitter: "#",
     github: "#",
   },
-//   {
-//     id: 3,
-//     name: "Sana Ullah",
-//     position: "Flutter Developer",
-//     image: Sana,
-//     linkedin: "#",
-//     twitter: "#",
-//     github: "#",
-//   },
 
-//   {
-//     id: 3,
-//     name: "Anisul Islam",
-//     position: "React Native Developer",
-//     image: Anis,
-//     linkedin: "#",
-//     twitter: "#",
-//     github: "#",
-//   },
 ];
 
 const TeamSection = () => {
