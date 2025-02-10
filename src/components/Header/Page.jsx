@@ -52,7 +52,7 @@ const Page = () => {
 </div>
 
     {/* Image Section */}
-    <div className="relative w-full md:w-1/2 flex justify-center">
+    <div className="relative w-full md:w-1/2 flex justify-center items-center ml-16">
       <img
         src={screenn}
         alt="Screen"
@@ -61,26 +61,26 @@ const Page = () => {
       <img
         src={img1}
         alt="Logo"
-        className="absolute top-10 left-[-10px] max-w-full sm:w-auto h-[400px] sm:h-110 transform rotate-6 sm:ml-10 sm:mt-10 "
+        className="absolute top-10 left-[-20px] max-w-full sm:w-auto h-[400px] sm:h-110 transform rotate-10 sm:ml-10 sm:mt-10 "
       />
     </div>
   </div>
 
  {/* Button Section */}
 <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 w-full justify-center mt-10">
-  <button className="bg-green-600 text-white px-6 sm:px-8 lg:px-12 py-3 rounded-lg hover:bg-green-700 transition duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base lg:text-lg">
+  <button className="bg-green-700 text-white px-6 sm:px-8 lg:px-12 py-3 rounded-lg hover:bg-green-800 transition duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base lg:text-lg">
     <i className="fa fa-play text-2xl text-white"></i> Download Now for Free
   </button>
 
-  <button className="bg-green-600 text-white px-6 sm:px-8 lg:px-12 py-3 rounded-lg hover:bg-green-700 transition duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base lg:text-lg">
+  <button className="bg-green-700 text-white px-6 sm:px-8 lg:px-12 py-3 rounded-lg hover:bg-green-800 transition duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base lg:text-lg">
     <i className="fa fa-sign-in text-2xl text-white"></i> Signup Today
   </button>
 
   <button
-    className="bg-orange-600 text-white px-6 sm:px-8 lg:px-12 py-3 rounded-lg hover:bg-orange-700 transition duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base lg:text-lg"
+    className="bg-orange-600 text-white px-6 sm:px-8 lg:px-2 py-3 rounded-lg hover:bg-orange-700 transition duration-300 transform hover:scale-105 w-full sm:w-auto text-sm sm:text-base lg:text-lg mb-2 "
     onClick={handleScroll}
   >
-    <i className="fa fa-chevron-circle-down text-2xl text-white"></i> Learn more
+    <i className="fa fa-chevron-circle-down text-2xl text-white "></i> Learn more
   </button>
 </div>
 </section>
