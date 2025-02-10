@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
+
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -13,7 +14,7 @@ const FAQSection = () => {
     <div className="bg-blue-50 py-16 px-4 sm:px-8">
       <div className="max-w-screen-lg mx-auto text-center">
         <h2 className="text-3xl font-semibold text-gray-800 mb-6">
-          Got Questions? We’ve Got Answers!
+          Got Questions? <span className="text-green-500">We’ve Got Answers!</span>
         </h2>
         <div className="space-y-8">
           <div
@@ -21,7 +22,7 @@ const FAQSection = () => {
             onClick={() => toggleAnswer(0)}
           >
             <h3 className="text-xl font-semibold text-gray-700 flex justify-between items-center">
-              Is Brain Bank free to use?
+              Is BrainBank free to use?
               <FontAwesomeIcon
                 icon={openIndex === 0 ? faMinus : faPlus}
                 className="ml-2"

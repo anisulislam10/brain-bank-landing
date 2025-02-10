@@ -11,9 +11,9 @@ const KeyFeaturesSection = () => {
   return (
     <div className="bg-gray-50 py-16 px-4 sm:px-8 sm:w-full">
       <div className="max-w-screen-xl mx-auto text-center">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-12">
-          Why Choose Brain Bank?
-        </h2>
+        <h2 className="text-3xl font-semibold text-gray-800 mb-12 ">
+        Why Choose <span className="text-green-500 ">BrainBank?</span>  
+              </h2>
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 text-left">
           {/* Feature 1 */}
           <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -25,7 +25,7 @@ const KeyFeaturesSection = () => {
               Affordable Expertise
             </h3>
             <p className="text-gray-600">
-              Say goodbye to expensive consultants! Brain Bank connects you with
+              Say goodbye to expensive consultants! BrainBank connects you with
               real people who offer practical, real-world advice at a fraction of
               the cost.
             </p>
@@ -55,7 +55,7 @@ const KeyFeaturesSection = () => {
               24/7 Access to Knowledge
             </h3>
             <p className="text-gray-600">
-              Get help at odd hours! Brain Bank is available 24/7, so you can
+              Get help at odd hours! BrainBank is available 24/7, so you can
               find answers anytime.
             </p>
           </div>
@@ -69,7 +69,7 @@ const KeyFeaturesSection = () => {
               Earn Money by Sharing Knowledge
             </h3>
             <p className="text-gray-600">
-              Monetize your skills! Brain Bank allows you to help others while
+              Monetize your skills! BrainBank allows you to help others while
               earning money for your expertise.
             </p>
           </div>
@@ -83,7 +83,7 @@ const KeyFeaturesSection = () => {
               User-Friendly Interface
             </h3>
             <p className="text-gray-600">
-              Whether you're tech-savvy or new to apps, Brain Bank is intuitive
+              Whether you're tech-savvy or new to apps, BrainBank is intuitive
               and easy to navigate.
             </p>
           </div>

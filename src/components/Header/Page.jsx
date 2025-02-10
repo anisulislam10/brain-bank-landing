@@ -17,6 +17,7 @@ import ProblemSolutionSection from '../OurSolution';
 
 
 
+
 const Page = () => {
 
     const featuresRef = useRef(null);
@@ -46,7 +47,7 @@ const Page = () => {
     Real People, Real Advice Anytime, Anywhere!
   </h1>
   <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 animate__animated animate__fadeIn animate__delay-1s text-start">
-    Access affordable, practical advice from everyday experts. Whether it’s immigration tips, event planning, or career guidance, Brain Bank connects you with the right people to solve your problems.
+    Access affordable, practical advice from everyday experts. Whether it’s immigration tips, event planning, or career guidance, BrainBank connects you with the right people to solve your problems.
   </p>
 </div>
 
@@ -99,13 +100,16 @@ const Page = () => {
 
       {/* How It Works Section */}
       <section className="bg-white py-20 px-8">
-        <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-12">Get Started in 3 Easy Steps</h2>
+        <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-12">Get Started in  <span className="text-green-500 ">  3 Easy Steps</span></h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           <div>
 
 
             <h3 className="text-xl font-semibold mb-4">
+
+              
                 1️⃣
+                
                 Sign Up</h3>
             <p>Create your free account in seconds.</p>
           </div>
@@ -164,7 +168,7 @@ const Page = () => {
     </div>
 
     <p className="text-white-500 mt-6 text-sm">
-      © {new Date().getFullYear()} Brain Bank. All rights reserved.
+     © {new Date().getFullYear()} BrainBank. All rights reserved.
     </p>
   </div>
 </footer>
