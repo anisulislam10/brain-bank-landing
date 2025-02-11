@@ -1,24 +1,31 @@
 import React, { useState } from "react";
-import signupImage from "./../assets/signup/sign-up-form.svg"; 
+import signupImage from "./../assets/signup/sign-up-form.svg";
 
 const SignupForm = () => {
   // State to manage form input
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [emailOrPhone, setEmailOrPhone] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Basic validation
-    if (!email || !password) {
-      setError("Both fields are required.");
+    if (!username || !emailOrPhone || !password || !confirmPassword) {
+      setError("All fields are required.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match.");
       return;
     }
 
     // Clear error and perform submission logic
     setError("");
-    console.log("Form submitted", { email, password });
+    console.log("Form submitted", { username, emailOrPhone, password });
   };
 
   return (
@@ -26,7 +33,7 @@ const SignupForm = () => {
       <div className="bg-white rounded-lg overflow-hidden max-w-4xl w-full flex flex-col md:flex-row">
         
         {/* Left Image Section */}
-        <div className="hidden md:flex w-1/2    ">
+        <div className="hidden md:flex w-1/2">
           <img
             src={signupImage}
             alt="Signup"
@@ -36,27 +43,43 @@ const SignupForm = () => {
 
         {/* Right Form Section */}
         <div className="w-full md:w-1/2 p-8">
-          <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
-            Sign Up
+          <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">
+            Join the <span className="text-green-600">BrainBank Community</span>
           </h2>
 
           {/* Error Message */}
           {error && <p className="text-red-500 text-sm text-center mb-4">{error}</p>}
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Email Input */}
+            {/* Username Input */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Email Address
+              <label htmlFor="username" className="block text-sm font-medium text-gray-700">
+                Username
               </label>
               <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="text"
+                id="username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 required
                 className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
-                placeholder="Enter your email"
+                placeholder="Enter your username"
+              />
+            </div>
+
+            {/* Email or Phone Input */}
+            <div>
+              <label htmlFor="emailOrPhone" className="block text-sm font-medium text-gray-700">
+                Email or Phone
+              </label>
+              <input
+                type="text"
+                id="emailOrPhone"
+                value={emailOrPhone}
+                onChange={(e) => setEmailOrPhone(e.target.value)}
+                required
+                className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
+                placeholder="Enter your email or phone"
               />
             </div>
 
@@ -73,6 +96,22 @@ const SignupForm = () => {
                 required
                 className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
                 placeholder="Enter your password"
+              />
+            </div>
+
+            {/* Confirm Password Input */}
+            <div>
+              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
+                Confirm Password
+              </label>
+              <input
+                type="password"
+                id="confirmPassword"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                required
+                className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
+                placeholder="Confirm your password"
               />
             </div>
 
