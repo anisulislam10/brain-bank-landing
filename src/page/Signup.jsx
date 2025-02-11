@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import signupImage from "./../assets/signup/sign-up-form.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
+
 
 const SignupForm = () => {
   // State to manage form input
@@ -37,7 +40,7 @@ const SignupForm = () => {
           <img
             src={signupImage}
             alt="Signup"
-            className="object-cover w-full h-full"
+            className="object-bottom w-full h-full"
           />
         </div>
 
@@ -121,7 +124,7 @@ const SignupForm = () => {
                 type="submit"
                 className="w-full p-3 bg-green-600 text-white font-bold rounded-lg hover:bg-green-700 transition duration-300"
               >
-                Sign Up
+               <FontAwesomeIcon icon={faLock} />  Sign Up
               </button>
             </div>
           </form>
