@@ -29,13 +29,6 @@ const InvestorSection = () => {
 
       </div>
 
-      {/* Team Section
-      <div className="container mx-auto mb-12 text-center">
-        <h3 className="text-4xl font-bold text-gray-900 mb-6">Our Team</h3>
-        <p className="text-xl text-gray-700 mb-6">
-          Experienced and passionate professionals with a shared vision of democratizing knowledge and empowering individuals.
-        </p>
-      </div> */}
     </section>
   );
 };
