@@ -16,10 +16,10 @@ const PricingSection = () => {
             <div className="flex justify-center items-center mb-4">
               <FontAwesomeIcon icon={faUsers} size="3x" className="text-green-500" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-700 mb-4">
+            <h3 className="text-xl font-semibold text-gray-700 mb-4 text-start">
               For Knowledge Seekers
             </h3>
-            <p className="text-gray-600 text-lg mb-4">
+            <p className="text-gray-600 text-lg mb-4 text-start">
               Pay only for the advice you need. Prices start as low as <span className="font-bold text-green-600">$5</span> per session, depending on the expert and the complexity of your query.
             </p>
             <ul className="text-left text-gray-600">
@@ -43,10 +43,10 @@ const PricingSection = () => {
             <div className="flex justify-center items-center mb-4">
               <FontAwesomeIcon icon={faUserTie} size="3x" className="text-green-500" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-700 mb-4">
+            <h3 className="text-xl font-semibold text-gray-700 mb-4 text-start">
               For Knowledge Providers
             </h3>
-            <p className="text-gray-600 text-lg mb-4">
+            <p className="text-gray-600 text-lg mb-4 text-start">
               Set your own rates and keep 80% of the earnings. We only take a small commission to keep the platform running.
             </p>
             <ul className="text-left text-gray-600">
