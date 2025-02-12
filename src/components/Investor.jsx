@@ -1,5 +1,6 @@
 import React from "react";
 import { FaDollarSign, FaLightbulb, FaUsers, FaChartLine } from "react-icons/fa";
+import { Link } from "react-router";
 
 const InvestorSection = () => {
   return (
@@ -15,11 +16,9 @@ const InvestorSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 w-full text-center">
-  <a
-    href="#"
-    className="bg-green-600 text-white px-8 py-3 sm:px-10 sm:py-4 rounded-xl hover:bg-green-700 transition duration-300 transform hover:scale-105 w-full sm:w-auto">
+  <Link to='/contactform' className="bg-green-600 text-white px-8 py-3 sm:px-10 sm:py-4 rounded-xl hover:bg-green-700 transition duration-300 transform hover:scale-105 w-full sm:w-auto">
     Schedule a Demo
-  </a>
+  </Link>
   <a
     href="#"
     className="bg-gray-900 text-white px-8 py-3 sm:px-10 sm:py-4 rounded-xl hover:bg-gray-800 transition duration-300 transform hover:scale-105 w-full sm:w-auto">

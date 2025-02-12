@@ -3,6 +3,7 @@ import { auth, db } from "../Config/firebaseConfig";
 import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 import signupImage from "./../assets/signup/sign-up-form.svg";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faEye, faEyeSlash, faSpinner } from "@fortawesome/free-solid-svg-icons";
 
