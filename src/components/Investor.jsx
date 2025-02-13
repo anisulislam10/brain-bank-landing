@@ -1,11 +1,10 @@
 import React from "react";
 import { FaDollarSign, FaLightbulb, FaUsers, FaChartLine } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link, } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
-import { faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
-
+import { faMoneyBillTrendUp } from "@fortawesome/free-solid-svg-icons";
 const InvestorSection = () => {
   return (
     <section className="bg-gradient-to-br from-gray-50 to-blue-50 py-20 px-6">
@@ -24,12 +23,12 @@ const InvestorSection = () => {
    
    <FontAwesomeIcon icon={faPaperPlane} /> Schedule a Demo
   </Link>
-  <a
-    href="#"
+  <Link to='/investor'
+   
     className="bg-gray-900 text-white px-8 py-3 sm:px-10 sm:py-4 rounded-xl hover:bg-gray-800 transition duration-300 transform hover:scale-105 w-full sm:w-auto">
 
-<FontAwesomeIcon icon={faCloudArrowDown} /> Download Investor Deck
-  </a>
+<FontAwesomeIcon icon={faMoneyBillTrendUp} />  Investor Deck
+  </Link>
 </div>
 
       </div>

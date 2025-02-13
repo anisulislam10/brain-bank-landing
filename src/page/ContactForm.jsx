@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import vaimg from "./../assets/contact/va.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import Footer from "../components/Footer";
 
 const ScheduleDemoForm = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -40,9 +41,9 @@ const ScheduleDemoForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-green-500">
+    <><div className="flex justify-center items-center min-h-screen bg-green-400">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden flex w-full max-w-4xl">
-        
+
         {/* Left Side - Image */}
         <div className="w-1/2 hidden md:block">
           <img src={vaimg} alt="Schedule Demo" className="h-full w-full object-cover" />
@@ -51,7 +52,7 @@ const ScheduleDemoForm = () => {
         {/* Right Side - Form */}
         <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
           <h2 className="text-3xl font-semibold text-center text-gray-700 mb-6">
-            Schedule a <span className="text-green-500">Demo</span> 
+            Schedule a <span className="text-green-500">Demo</span>
           </h2>
 
           {submitted ? (
@@ -67,8 +68,7 @@ const ScheduleDemoForm = () => {
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full p-3 border rounded-md focus:ring-2 focus:ring-green-500 outline-none"
-                required
-              />
+                required />
 
               <input
                 type="email"
@@ -77,8 +77,7 @@ const ScheduleDemoForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full p-3 border rounded-md focus:ring-2 focus:ring-green-500 outline-none"
-                required
-              />
+                required />
 
               <textarea
                 name="message"
@@ -86,15 +85,12 @@ const ScheduleDemoForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 className="w-full p-3 border rounded-md focus:ring-2 focus:ring-green-500 outline-none"
-                required
-              />
+                required />
 
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-full flex items-center justify-center gap-2 py-3 rounded-md text-lg font-medium transition ${
-                  loading ? "bg-gray-400 cursor-not-allowed" : "bg-green-600 text-white hover:bg-green-700"
-                }`}
+                className={`w-full flex items-center justify-center gap-2 py-3 rounded-md text-lg font-medium transition ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-green-600 text-white hover:bg-green-700"}`}
               >
                 {loading ? (
                   <>
@@ -110,7 +106,8 @@ const ScheduleDemoForm = () => {
           )}
         </div>
       </div>
-    </div>
+
+    </div><Footer /></>
   );
 };
 

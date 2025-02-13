@@ -4,6 +4,7 @@ import vaimg from "./../assets/signup/Rocket.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import Footer from "../components/Footer";
 
 const EarlyBirdForm = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -45,7 +46,7 @@ const EarlyBirdForm = () => {
   }, [formData]);
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-green-400 to-green-500 p-4">
+    <><div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-green-400 to-green-500 p-4">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -99,8 +100,7 @@ const EarlyBirdForm = () => {
                 onChange={handleChange}
                 className="w-full p-3 border rounded-md focus:ring-2 focus:ring-green-500 outline-none"
                 required
-                aria-label="Your Name"
-              />
+                aria-label="Your Name" />
 
               <input
                 type="email"
@@ -110,8 +110,7 @@ const EarlyBirdForm = () => {
                 onChange={handleChange}
                 className="w-full p-3 border rounded-md focus:ring-2 focus:ring-green-500 outline-none"
                 required
-                aria-label="Your Email"
-              />
+                aria-label="Your Email" />
 
               <textarea
                 name="message"
@@ -120,8 +119,7 @@ const EarlyBirdForm = () => {
                 onChange={handleChange}
                 className="w-full p-3 border rounded-md focus:ring-2 focus:ring-green-500 outline-none"
                 required
-                aria-label="Your Message"
-              />
+                aria-label="Your Message" />
 
               {error && (
                 <motion.p
@@ -138,9 +136,7 @@ const EarlyBirdForm = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-full flex items-center justify-center gap-2 py-3 rounded-md text-lg font-medium transition ${
-                  loading ? "bg-gray-400 cursor-not-allowed" : "bg-green-600 text-white hover:bg-green-700"
-                }`}
+                className={`w-full flex items-center justify-center gap-2 py-3 rounded-md text-lg font-medium transition ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-green-600 text-white hover:bg-green-700"}`}
                 aria-label="Submit Form"
               >
                 {loading ? (
@@ -158,6 +154,8 @@ const EarlyBirdForm = () => {
         </div>
       </motion.div>
     </div>
+    <Footer />
+    </>
   );
 };
 
