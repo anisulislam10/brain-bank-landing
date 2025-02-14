@@ -106,6 +106,51 @@ const Page = () => {
         <KeyFeaturesSection />
       </section>
 
+      <section className="bg-white py-20 px-8">
+      <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-12">
+        Get Started in <span className="text-green-500">3 Easy Steps</span>
+      </h2>
+
+      <div className="flex flex-col sm:flex-row items-center gap-12 max-w-screen-lg mx-auto">
+        {/* Left Side - Image */}
+        <div className="w-full sm:w-1/2">
+          <img
+            src={app}
+            alt="How It Works"
+            className="w-full rounded-lg "
+          />
+        </div>
+
+        {/* Right Side - Steps */}
+        <div className="w-full sm:w-1/2">
+          <ul className="space-y-6 text-lg">
+            <li className="flex items-start">
+              <span className="text-2xl mr-4">1️⃣</span>
+              <div>
+                <h3 className="font-semibold">Sign Up</h3>
+                <p>Create your free account in seconds.</p>
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="text-2xl mr-4">2️⃣</span>
+              <div>
+                <h3 className="font-semibold">Find or Share Knowledge</h3>
+                <p>Search for experts or list your own expertise to start earning.</p>
+              </div>
+            </li>
+            <li className="flex items-start">
+              <span className="text-2xl mr-4">3️⃣</span>
+              <div>
+                <h3 className="font-semibold">Connect and Solve</h3>
+                <p>Chat directly with experts, get advice, and solve your problems.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
       <FAQSection />
       <PricingSection />
       <InvestorSection />
