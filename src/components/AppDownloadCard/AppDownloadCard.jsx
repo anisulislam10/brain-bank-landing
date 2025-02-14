@@ -29,7 +29,7 @@ const AppDownloadCard = () => {
         transition={{ duration: 0.8 }}
       >
         <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-          Download the App
+          <span className="text-green-500">Download</span> the App
         </h2>
         <p className="text-gray-600 mt-2 text-sm md:text-base">
           Get early access to our app and experience the future of knowledge sharing.
