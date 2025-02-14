@@ -18,8 +18,10 @@ const EarlyBirdForm = () => {
 
   const handleSubmit = useCallback((e) => {
     e.preventDefault();
+    window.scrollTo(0, 0); // Scroll to the top of the page
+
     setLoading(true);
-    setError(""); // Reset error before submission
+    setError(""); 
 
     const serviceId = import.meta.env.VITE_SERVICE_ID;
     const templateId = import.meta.env.VITE_TEMPLATE_ID;
