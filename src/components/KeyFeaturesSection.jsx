@@ -9,7 +9,7 @@ const KeyFeaturesSection = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}whyus/get`);
-        console.log("Fetched data:", response.data);
+        // console.log("Fetched data:", response.data);
         setFeatures(response.data); // Assuming response.data is an array of objects
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -46,7 +46,6 @@ src={`${import.meta.env.VITE_SERVER_URL.replace("/api","")}${feature.imageUrl.re
                     alt={feature.title} 
                     className="h-16 mb-4 object-cover" 
                   />
-                  {console.log("Full Image URL--->:", `${import.meta.env.VITE_SERVER_URL.replace("/api","")}${feature.imageUrl.replace("/","")}`)}
                   {feature.title}
                 </h3>
                 <p className="text-gray-600">{feature.subtitle}</p>

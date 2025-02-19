@@ -9,7 +9,7 @@ const TeamSection = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}team/get`);
-        console.log("team data.....", response.data);
+        // console.log("team data.....", response.data);
         setTeamMembers(response.data); // Update state with fetched data
       } catch (error) {
         console.error("Error fetching team data:", error);
