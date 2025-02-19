@@ -1,14 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Drawer, List, ListItem, ListItemText, Divider, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Header from "./Header"; // Adjust paths as necessary
 import FAQS from "./FAQS"; // Adjust paths as necessary
 import OurTeam from "./OurTeam";
 import WhyBrainBank from "./WhyBrainBank";
+import axios from "axios";
 
 const Dashboard = () => {
+  const [count, setcount] = useState()
   const [selectedComponent, setSelectedComponent] = useState("dashboard");
   const navigate = useNavigate();
+
+useEffect(() => {
+  const fetchData= async()=>{
+    const response= await axios.get(`${import.meta.env.VITE_SERVER_URL}faq/count`)
+    // console.log("resss",response.data.totalFaqs)
+    setcount(response.data.totalFaqs)
+  }
+  fetchData()
+}, [])
+
 
   // Handle navigation on menu item click
   const handleMenuClick = (component) => {
@@ -35,9 +47,9 @@ const Dashboard = () => {
           <div>
             <h1 className="text-xl font-semibold mb-4">BrainBank Dashboard</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <DashboardCard title="Total Questions" value="120" bgColor="blue-500" />
+              <DashboardCard title="Total Questions" value={count} bgColor="blue-500" />
               <DashboardCard title="Total Users" value="1" bgColor="green-500" />
-              <DashboardCard title="User Name" value="@admin" bgColor="yellow-500" />
+              <DashboardCard title="User Name" value="@Admin" bgColor="yellow-500" />
             </div>
           </div>
         );
