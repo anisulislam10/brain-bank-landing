@@ -1,16 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import faqimg from "./../assets/contact/faq.svg";
-// import faqimg from "./../assets/signup/faqgif.gif";
-
+import axios from "axios";
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [faqList, setFaqList] = useState([]); // State to hold FAQ data from API
 
   const toggleAnswer = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}faq/get`);
+        console.log("response----", response.data); // Log the data for debugging
+        setFaqList(response.data); // Set the fetched data to state
+      } catch (error) {
+        console.error("Error fetching FAQ data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="bg-blue-50 py-16 px-4 sm:px-8">
@@ -26,32 +40,24 @@ const FAQSection = () => {
             Got Questions? <span className="text-green-500">We’ve Got Answers!</span>
           </h2>
           <div className="space-y-4">
-            {[
-              {
-                question: "Is BrainBank free to use?",
-                answer: "✅ Yes, signing up and browsing experts is free. You only pay for the advice you need.",
-              },
-              {
-                question: "How do I become an expert?",
-                answer: "✅ Simply sign up, list your expertise, and start earning money by helping others.",
-              },
-              {
-                question: "Is my information safe?",
-                answer: "✅ Absolutely. We prioritize your privacy and ensure secure transactions.",
-              },
-            ].map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-md rounded-lg p-4 cursor-pointer"
-                onClick={() => toggleAnswer(index)}
-              >
-                <h3 className="text-lg font-semibold text-gray-700 flex justify-between items-center">
-                  {faq.question}
-                  <FontAwesomeIcon icon={openIndex === index ? faMinus : faPlus} className="ml-2" />
-                </h3>
-                {openIndex === index && <p className="text-gray-600 mt-1 text-sm">{faq.answer}</p>}
-              </div>
-            ))}
+            {/* Map over the FAQ data from state */}
+            {faqList.length === 0 ? (
+              <p className="text-gray-600">No FAQs available.</p>
+            ) : (
+              faqList.map((faq, index) => (
+                <div
+                  key={faq._id} // Use _id for unique key
+                  className="bg-white shadow-md rounded-lg p-4 cursor-pointer"
+                  onClick={() => toggleAnswer(index)}
+                >
+                  <h3 className="text-lg font-semibold text-gray-700 flex justify-between items-center">
+                    {faq.question}
+                    <FontAwesomeIcon icon={openIndex === index ? faMinus : faPlus} className="ml-2" />
+                  </h3>
+                  {openIndex === index && <p className="text-gray-600 mt-1 text-sm"> ✅ {faq.answer}</p>}
+                </div>
+              ))
+            )}
           </div>
         </div>
       </div>
