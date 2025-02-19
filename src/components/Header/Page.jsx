@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";  // Import Helmet
 import logo_off from './../../assets/logo/logo.webp';
 import img1 from './../../assets/header/h1.webp';
@@ -14,14 +14,34 @@ import Footer from "../Footer";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import axios from "axios";
 
 const Page = () => {
   const featuresRef = useRef(null);
+const [title, settitle] = useState()
+const [subtitle, setSubTitle] = useState()
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
+
+
+  useEffect(() => {
+    const fetchData= async ()=>{
+      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}header/get`)
+      // console.log("response data----",response.data[0].subtitle);
+      settitle(response.data[0].title)
+      setSubTitle(response.data[0].subtitle)
+    }
+
+    fetchData()
+  }, [])
+
+
+
+  
+  
   return (
     <div>
       {/* SEO Metadata */}
@@ -59,10 +79,12 @@ const Page = () => {
           <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mx-auto mb-8 sm:mb-12 md:mb-16 gap-6 md:gap-12 lg:gap-16 text-center md:text-start">
             <div className="flex flex-col items-center sm:items-center md:items-start w-full sm:w-5/6 md:w-3/4 lg:w-1/2 px-4 sm:px-6 md:px-8 text-center sm:text-center md:text-start">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4 sm:mb-6 md:mb-8 mt-[100px] text-start">
-                Real People, Real Advice Anytime, Anywhere!
+                
+                {title}
               </h1>
               <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-start">
-                Access affordable, practical advice from everyday experts. Whether it’s immigration tips, event planning, or career guidance, BrainBank connects you with the right people to solve your problems.
+
+                {subtitle}
               </p>
             </div>
 
@@ -125,7 +147,7 @@ const Page = () => {
         <div className="w-full sm:w-1/2">
           <ul className="space-y-6 text-lg">
             <li className="flex items-start">
-              <span className="text-2xl mr-4">1️⃣</span>
+              <span className="text-2xl mr-4 text-green-400 bg-green-500">1️⃣ </span>
               <div>
                 <h3 className="font-semibold">Sign Up</h3>
                 <p>Create your free account in seconds.</p>
