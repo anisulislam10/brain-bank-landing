@@ -16,7 +16,7 @@ const FAQSection = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}faq/get`);
-        console.log("response----", response.data); // Log the data for debugging
+        // console.log("response----", response.data); // Log the data for debugging
         setFaqList(response.data); // Set the fetched data to state
       } catch (error) {
         console.error("Error fetching FAQ data:", error);
