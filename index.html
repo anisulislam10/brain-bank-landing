@@ -5,9 +5,30 @@
     <link rel="icon" type="image/svg+xml" href="/logo.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BrainBank - Access affordable, practical advice from everyday experts.</title>
+
+    <!-- reCAPTCHA Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- reCAPTCHA Form -->
+    <div style="text-align: center; margin-top: 20px;">
+      <form action="?" method="POST">
+        <div class="g-recaptcha" 
+          data-sitekey=import.meta.env.VITE_SITE_KEY
+          data-callback="captchaCallback"></div>
+      </form>
+    </div>
+
+    <script>
+      function captchaCallback(response) {
+        if (typeof Captcha !== "undefined") {
+          Captcha.postMessage(response);
+        }
+      }
+    </script>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet-async";  // Import Helmet
 import logo_off from './../../assets/logo/logo.webp';
 import img1 from './../../assets/header/h1.webp';
-import screenn from './../../assets/header/screenn.png';
+import screenn from './../../assets/header/screen.webp';
 import app from './../../assets/header/bgif.gif';
 import InvestorSection from "../Investor";
 import FAQSection from "../FAQSection";
