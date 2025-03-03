@@ -98,7 +98,7 @@ const [subtitle, setSubTitle] = useState()
               <img
                 src={img1}
                 alt="Logo"
-                className="absolute top-10 left-[-20px] max-w-full sm:w-auto h-[400px] sm:h-110 transform rotate-10 sm:ml-10 sm:mt-10 "
+                className="absolute top-10 left-[-20px] max-w-full sm:w-auto h-[400px] sm:h-100 transform rotate-10 sm:ml-10 sm:mt-10 "
               />
             </div>
           </div>
