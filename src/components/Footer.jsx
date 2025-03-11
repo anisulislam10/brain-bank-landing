@@ -1,5 +1,10 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { CiLocationOn } from "react-icons/ci";
+import { MdOutlineEmail,MdOutlineSettingsPhone } from "react-icons/md";
+
+
+
 
 const Footer = () => {
   return (
@@ -20,24 +25,33 @@ const Footer = () => {
 
     {/* Contact Us Section */}
     <div>
-      <h3 className="text-xl font-bold mb-3">Contact Us</h3>
-      <p>
-  Email:{" "}
-  <a href="mailto:info@sharplogician.com" className="text-white hover:underline">
-    info@sharplogician.com
-  </a>
-</p>
-<p>
-  Phone:{" "}
-  <a href="tel:+13074604411" className="text-white hover:underline">
-    +1 307 460 4411
-  </a>
-</p>
-      <p>USA Location:
-      1309 Coffeen Avenue STE 1200 Sheridan Wyoming 82801, US</p>
-      <p> Pakistan Location:
-      Ofc# 32 , 4th Floor Agile Center Bahria P-4 Isb PK</p>
-    </div>
+  <h3 className="text-xl font-bold mb-3">Contact Us</h3>
+
+  <p className="flex items-center">
+    <MdOutlineEmail className="mr-2" />
+    <a href="mailto:info@sharplogician.com" className="text-white hover:underline">
+      info@sharplogician.com
+    </a>
+  </p>
+
+  <p className="flex items-center">
+    <MdOutlineSettingsPhone className="mr-2" />
+    <a href="tel:+13074604411" className="text-white hover:underline">
+      +1 307 460 4411
+    </a>
+  </p>
+
+  <p className="flex items-start">
+    <CiLocationOn className="mr-2" />
+    <span>USA: 1309 Coffeen Avenue STE 1200 Sheridan Wyoming 82801, US</span>
+  </p>
+
+  <p className="flex items-start">
+    <CiLocationOn className="mr-2" />
+    <span>Pakistan: Ofc# 32, 4th Floor Agile Center Bahria P-4 Islamabad, PK</span>
+  </p>
+</div>
+
 
     {/* Social Links Section */}
     <div className="flex flex-col items-center sm:items-start">
